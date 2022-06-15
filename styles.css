@@ -9,14 +9,14 @@ h1 {
 
 p {
     color: #8b8b8bcc;
-    font-family: Verdana, Arial, Helvetica;
+    font-family: 'Alegreya', serif;
     font-size: 20px;
 }
 
 button {
     color: #fff;
     background-color: #025157;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 
@@ -25,6 +25,8 @@ button {
 .header {
     margin: 40px 20px 0;
     font-size: 0;
+    font-family: sans-serif;
+    height: 45px;
 }
 
 
@@ -38,7 +40,7 @@ button {
     vertical-align: middle;
 }
 
-li {
+header>nav>ul>li {
     display: inline;
 }
 
@@ -46,7 +48,7 @@ li {
     width: 15%;
 }
 
-.logo>img {
+.logo img {
     width: 15%;
 }
 
@@ -57,11 +59,31 @@ li {
     font-weight: 900;
 }
 
+.navbar ul>li {
+    margin: 0 25px;
+}
+
 .actions {
     width: 15%;
-    text-align: right;
+    text-align: center;
     font-size: 14px;
     font-weight: 600;
+}
+
+.actions>* {
+    margin: 0 10px;
+}
+
+.actions a {
+    color: #67b54b;
+}
+
+.actions button {
+    color: #fff;
+    background-color: #67b54b;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 5px;
 }
 
 
