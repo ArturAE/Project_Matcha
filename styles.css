@@ -5,28 +5,52 @@ body {
 h1 {
     color: #025157;
     text-align: center;
+    font-family: 'Alegreya', serif;
+    font-size: 60px;
 }
 
 p {
     color: #8b8b8bcc;
-    font-family: 'Alegreya', serif;
+    font-family: Verdana, serif;
     font-size: 20px;
 }
 
 button {
     color: #fff;
     background-color: #025157;
+    border: none;
     border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 13px 14px;
+    margin-left: -5px;
+}
+
+input {
+    border: 1px solid #b6b6b6;
+    padding: 12px 14px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    m/* argin-right: -5px; */
 }
 
 
 /* Header */
 
+.fixed-header {
+    position: fixed;
+    /* elegimos su posicion para que la mantenga y los elementos no esten sobrepuestos o transparenten */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fffbf7;
+}
+
 .header {
     margin: 40px 20px 0;
     font-size: 0;
     font-family: sans-serif;
-    height: 45px;
 }
 
 
@@ -42,6 +66,7 @@ button {
 
 header>nav>ul>li {
     display: inline;
+    margin: 0 25px 0;
 }
 
 .logo {
@@ -53,19 +78,13 @@ header>nav>ul>li {
 }
 
 .navbar {
-    width: 70%;
     text-align: center;
     color: #025157;
-    font-weight: 900;
-}
-
-.navbar ul>li {
-    margin: 0 25px;
+    font-weight: 500;
 }
 
 .actions {
-    width: 15%;
-    text-align: center;
+    text-align: right;
     font-size: 14px;
     font-weight: 600;
 }
@@ -90,6 +109,249 @@ header>nav>ul>li {
 /* Parte central */
 
 .main {
-    margin-top: 140px;
+    margin-top: 285px;
     text-align: center;
 }
+
+.promo {
+    display: flex;
+    width: 70%;
+    margin: 100px auto;
+    align-items: center;
+}
+
+.explanatory-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.explanatory-video img {
+    width: 120px;
+    margin-top: 10px;
+}
+
+.publish {
+    margin-left: 30px;
+}
+
+.publish h3 {
+    font-family: "Alegreya", serif;
+    font-size: 40px;
+    line-height: 48px;
+    color: #025157;
+}
+
+.publish>p {
+    font-size: 16px;
+    color: #343434;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.publish>form {
+    display: flex;
+}
+
+.publish>form p {
+    color: #8b8b8bcc;
+    margin-right: 10px;
+    display: block;
+}
+
+.testimonios {
+    background-color: #a1d683;
+    padding: 30px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.testimonios h2 {
+    font-family: "Alegreya", serif;
+    font-size: 40px;
+    /* line-height: 50px; */
+    color: #025157;
+}
+
+.testimonios .test-mark {
+    flex: 1;
+    padding-right: 100px;
+}
+
+.testimonios .test-mark p {
+    color: #343434;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.testimonios .test-mark button {
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    height: 45px;
+    font-weight: 600;
+    margin-left: 0;
+}
+
+.testimonios .test-mark img {
+    width: 500px;
+    max-width: 100%;
+}
+
+.features {
+    background-color: #025157;
+    padding: 5% 10%;
+    /* para poder usar grid */
+    display: grid;
+    /* cada columna tendra un espacion de 300px */
+    /*forma larga, cada 300px es una columna, forma corta pones la cantidad de columnas que seran y su tamaño */
+    /* grid-template-columns: 300px 300px;
+       /*  grid-template-columns: repeat(2, 300px); */
+    /* fr (fracción) que se encarga de calcular dinámicamente el espacio disponible y dividirlo entre los diversos elementos. */
+    /* estamos definiendo 2 columnas, la primera con un ancho fijo de 500px y la segunda columna con el resto de espacio disponible en la pantalla. */
+    /* grid-template-columns: 500px 1fr; */
+    /* Declarando que cada columna ocupe una fracción del espacio disponible, hacemos que cada una ocupe la mitad del espacio disponible, 
+        de esta manera si tuviéramos cuatro columnas cada una con el ancho de 1fr,
+         cada columna estará tomando un ancho del 25% del espacio disponible o 1/4 (depende de que notación les guste y entiendan mejor). */
+    /* grid-template-columns: 1fr 1fr; */
+    /* se puede hacer de la forma corta */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* altura que tendra el contenedor (cada una de las filas), como tendremos 2 filas hara la division de cada una de ellas teniendo 330 cada una */
+    /* height: 660px; */
+    /* hace lo mismo que el anterior pero en lugar de columna sera en filas */
+    /* grid-template-rows: repeat(2, 1fr); */
+    /* forma corta, columna, fila y areas (no aplica aqui) */
+    grid-template: repeat(2, 330px) / repeat(2, 1fr);
+    /*  */
+}
+
+.flex-card {
+    margin: 15px 30px;
+    background-color: #fff;
+    border: 1px solid #f5d8d8;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content {
+    padding: 30px 30px;
+    flex: 2;
+}
+
+.content * {
+    margin-bottom: 15px;
+}
+
+.content img {
+    width: 50px;
+}
+
+.content h3 {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 100;
+}
+
+.content p {
+    font-size: 15px;
+    color: #656464;
+    font-weight: 100;
+}
+
+.content a {
+    font-size: 15px;
+    color: #67b54b;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.features-image {
+    flex: 1;
+    width: 40%;
+    position: relative;
+    right: -50px;
+    height: 80%;
+}
+
+.features-image figure,
+.features-image img {
+    margin: 0;
+    height: 90%;
+}
+
+
+/** dispositivos móviles en vista viewport (vertical) */
+
+@media (max-width: 575px) {
+    /* .navbar,
+    .actions {
+        display: none;
+    } */
+    .main {
+        margin-top: 130px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .banner>img {
+        width: 100%;
+    }
+    .publish>form {
+        flex-direction: column;
+    }
+    .publish>form>div {
+        height: 50px;
+        margin-top: 10px;
+    }
+    .publish>form>div>input {
+        width: 65%;
+    }
+    .promo {
+        flex-direction: column;
+        max-width: 90%;
+    }
+    .explanatory-video>video {
+        width: 100%;
+    }
+    .publish {
+        margin-top: 10px;
+    }
+    .publish>h3 {
+        font-size: 25px;
+        line-height: 1.2;
+    }
+    .features {
+        /* 4 filas, toman el espacio que tienen disponible */
+        grid-template: repeat(4, 1fr) / 1fr;
+        padding: 0;
+    }
+    .features-image {
+        /* height: 30%;
+        left: -15px; */
+        display: none;
+    }
+}
+
+
+/** dispositivos pequeños en vista landscape (horizontal) */
+
+@media (min-width: 576px) and (max-width: 767px) {}
+
+
+/** dispositivos medianos (tablets) */
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+
+/** dispositivos grandes (desktops) */
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+
+/** dispositivos extra grandes (monitores grandes, tvs) */
+
+@media (min-width: 1200px) {}
