@@ -81,6 +81,7 @@ header>nav>ul>li {
     text-align: center;
     color: #025157;
     font-weight: 500;
+    background-color: #fffbf7;
 }
 
 .actions {
@@ -159,46 +160,95 @@ header>nav>ul>li {
     display: block;
 }
 
-.testimonios {
-    background-color: #a1d683;
-    padding: 30px 120px;
+
+/* .success {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    background-color: #a1d683;
 }
 
-.testimonios h2 {
+.success .text-view {
+    flex: 2;
+    padding: 5% 10%;
+    margin: 20px;
+}
+
+.success .text-view h2 {
     font-family: "Alegreya", serif;
     font-size: 40px;
-    /* line-height: 50px; */
     color: #025157;
 }
 
-.testimonios .test-mark {
-    flex: 1;
-    padding-right: 100px;
-}
-
-.testimonios .test-mark p {
+.success .text-view p {
+    font-size: 20px;
     color: #343434;
-    font-size: 15px;
-    line-height: 25px;
-    margin-bottom: 15px;
+    line-height: 1.5;
+    margin-bottom: 50px;
 }
 
-.testimonios .test-mark button {
-    font-size: 15px;
-    padding: 10px 15px;
-    border-radius: 8px;
-    height: 45px;
-    font-weight: 600;
-    margin-left: 0;
+.success .text-view button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    height: 80px;
+    font-size: 25px;
 }
 
-.testimonios .test-mark img {
-    width: 500px;
-    max-width: 100%;
+.success .text-view img {
+    width: 100%;
 }
+
+.success .stories {
+    flex: 1;
+    margin: 80px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.success .stories .card-image {
+    position: relative;
+    margin-top: 0;
+    padding: 0;
+}
+
+.success .stories .card-image .card-company {
+    position: absolute;
+    background-color: #f9da73;
+    border-radius: 50%;
+    width: 30%;
+    height: 20%;
+    bottom: -40px;
+    right: 50px;
+    max-width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.success .stories .card-body {
+    padding: 30px;
+}
+
+.success .stories .card-body h3 {
+    font-family: "Alegreya", serif;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #025157;
+}
+
+.success .stories .card-body p {
+    font-family: "Alegreya", serif;
+    color: #025157;
+    font-size: 25px;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.success .stories .card-footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+} */
 
 .features {
     background-color: #025157;
@@ -283,6 +333,160 @@ header>nav>ul>li {
     height: 90%;
 }
 
+.success-stories {
+    background-color: #a1d683;
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.success-stories .overview {
+    flex: 2;
+    padding-right: 100px;
+}
+
+.success-stories .overview h2 {
+    font-family: "Alegreya", serif;
+    font-size: 51px;
+    line-height: 61px;
+    color: #025157;
+}
+
+.success-stories .overview p {
+    color: #343434;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.success-stories .overview button {
+    font-size: 14px;
+    padding: 12px 12px 6px 12px;
+    border-radius: 8px;
+    height: 45px;
+    font-weight: 600;
+    margin-left: 0;
+}
+
+.success-stories .overview img {
+    width: 500px;
+    max-width: 100%;
+}
+
+.card {
+    max-width: 370px;
+    width: 100%;
+    min-height: 600px;
+    margin: 0 auto;
+}
+
+.card-body h4 {
+    color: #025157;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 12px;
+    font-family: "Alegreya", serif;
+}
+
+.card-body h3 {
+    font-family: "Alegreya", serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.results {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.results img {
+    width: 26px;
+    margin-right: 20px;
+}
+
+.results p {
+    margin: 0;
+    font-family: "Alegreya", serif;
+}
+
+.card-footer {
+    background-color: #ffffff;
+    color: #fff;
+    border: none;
+}
+
+.card-footer button {
+    display: block;
+    margin-left: 0;
+    border-radius: 5px;
+    font-size: 13;
+    font-weight: 600;
+    padding: 12px 20px;
+    width: 100%;
+    background-color: #025157;
+    color: #fff;
+}
+
+
+/* Con object-fit, hacemos que la imagen se ajuste a la medida de su contenedor y limitamos su alto */
+
+.card img {
+    max-height: 30vh;
+    object-fit: cover;
+}
+
+
+/* Agregamos position: relative para recibir un elemento con position:absolute más adelante */
+
+.card-body {
+    max-width: 370px;
+    width: 100%;
+    position: relative;
+    padding: 40px 15px 15px;
+}
+
+.card-circle {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -45px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+/* Cada círculo tiene su propio color. Verifica qué significa este selector: .card-circle.everly */
+
+.card-circle.everly {
+    background-color: #f9da73;
+}
+
+.card-circle.summit {
+    background-color: #81d742;
+}
+
+.card-circle.mambe {
+    background-color: #ef7179;
+}
+
+
+/* Los círculos deben recibir la imagen y ajustarla al tamaño */
+
+.card-circle.everly img,
+.card-circle.summit img,
+.card-circle.mambe img {
+    object-fit: contain;
+    width: 100%;
+}
+
 
 /** dispositivos móviles en vista viewport (vertical) */
 
@@ -333,6 +537,9 @@ header>nav>ul>li {
         /* height: 30%;
         left: -15px; */
         display: none;
+    }
+    .success-stories {
+        flex-direction: column;
     }
 }
 
