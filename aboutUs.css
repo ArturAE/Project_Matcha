@@ -1,0 +1,156 @@
+@charset "UTF-8";
+body {
+  background-color: #fffbf7 !important;
+  margin: 0;
+  font-family: "Alegreya", serif;
+}
+
+.logo {
+  width: 15%;
+}
+
+.logo > img {
+  width: 15%;
+}
+
+.navbar {
+  background-color: #fffbf7;
+  text-align: center;
+  color: #025157;
+  font-weight: 500;
+}
+.navbar ul {
+  padding: 0;
+}
+
+.actions {
+  text-align: right;
+  font-size: 14px;
+}
+.actions > * {
+  margin: 0 10px;
+}
+.actions a {
+  color: #67b54b;
+}
+.actions button {
+  background-color: #67b54b;
+  color: white;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 5px;
+}
+
+/* Aqui van los estilos que copiamos de las otras páginas que funcionan */
+.top-features {
+  padding: 30px 0 65px;
+  margin-top: 150px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-title h1 {
+  color: #025157;
+  font-family: "Alegreya", serif;
+  font-weight: 700;
+}
+
+.feature__img img {
+  width: 100%;
+}
+
+.feature__title__anchor {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  font-size: 24px;
+}
+.feature__title__anchor .feature__title {
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 24px;
+  font-family: "Alegreya", serif;
+  margin-bottom: 35px;
+  text-shadow: #025157 1px 1px 2px;
+  transition: color 0.3s ease-in-out;
+  transition: font-size 1s;
+}
+.feature__title__anchor .feature__title:hover {
+  color: #67b54b;
+  font-size: 25px;
+}
+
+.feature__cont p {
+  padding: 10px;
+  border-radius: 5px;
+  transition: color 1s linear;
+  transition: background-color 1s linear;
+  transition: font-size 1s linear;
+}
+.feature__cont p:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(208, 26, 26, 0.832);
+  font-size: 15px;
+}
+
+/* estilos para la flecha */
+.flecha {
+  margin: 0 auto;
+  width: 150px;
+  margin-bottom: 50px;
+}
+.flecha .flecha-contenedor {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 50px;
+}
+.flecha .flecha-contenedor .flecha-animada {
+  position: absolute;
+  animation: flecha, alrededor 3s linear infinite running;
+  /* animation: alrededor 3s linear infinite running; */
+  height: 150px;
+  width: 150px;
+}
+.flecha .flecha-contenedor .flecha-animada img {
+  width: 150px;
+  transform: rotate(270deg);
+}
+@keyframes flecha {
+  0% {
+    transform: translateY(10px);
+  }
+  25% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(60px);
+  }
+  75% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+@keyframes alrededor {
+  0% {
+    transform: translateX(-100px);
+  }
+  25% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  75% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+/*# sourceMappingURL=aboutUs.css.map */

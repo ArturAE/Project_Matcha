@@ -32,7 +32,7 @@ input {
     border-radius: 5px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    m/* argin-right: -5px; */
+    /* margin-right: -5px; */
 }
 
 
@@ -486,6 +486,18 @@ header>nav>ul>li {
     object-fit: contain;
     width: 100%;
 }
+
+
+/* lo de SASS ---- TENDRIA QUE BORRARSE Y USARSE DE FORMA NORMAL */
+
+.blog {
+    background-color: #ffffff;
+    max-width: unset;
+    padding: 5% 10%;
+}
+
+
+/* FINAL DE LO DE SASS */
 
 
 /** dispositivos móviles en vista viewport (vertical) */
